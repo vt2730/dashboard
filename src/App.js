@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import { AllItems } from './hooks/AllItems';
+import { Category } from './hooks/Category';
 
 function App() {
+  const {getAllItems} = AllItems();
+  const {getAllCategory} = Category() 
+
+  useEffect(()=>{
+    getAllItems()
+},[])
+
+  useEffect(()=>{
+    getAllCategory()
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      hello
     </div>
   );
 }
