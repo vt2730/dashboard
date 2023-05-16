@@ -1,0 +1,9 @@
+.buttonfieldinput button {
+	text-transform: capitalize;
+	font-family: "Ubuntu";
+	border-radius: 40px;
+}
+
+.buttonfieldinput{
+	cursor: pointer;
+}

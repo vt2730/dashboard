@@ -1,3 +1,10 @@
 body {
   margin: 0;
 }
+
+:root {
+  --upload-btn-cl: #814EE7;
+  --main-bg: #DCE0E3;
+  --active: #E4E4ED;
+  --secGray: #C3C9CD;
+}
