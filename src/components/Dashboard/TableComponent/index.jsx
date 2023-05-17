@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Checkbox} from '@mui/material'
 import DeleteModal from '../../../common/DeleteModal'
+import { useSelector } from 'react-redux'
+import moment from 'moment'
+import editImage from '../../../assests/editImage.png'
+import deleteImage from '../../../assests/deleteImage.png'
+import nameImage from '../../../assests/nameImg.png'
 
 const TableComponent = (props) => {
+  const tableiItems = useSelector((state) => state.dashboard.items)
+
   return (
     <div>
       <div className={`w-full bg-[#FFFFFF]`}>
@@ -29,7 +36,8 @@ const TableComponent = (props) => {
               </tr>
             </thead>
               <tbody>
-                {props?.tableData?.map((items) => {
+                {tableiItems && tableiItems?.length > 0 &&
+                 tableiItems?.map((items) => {
                   return <tr>
                     <td className={``} >
                       <Checkbox sx={{
@@ -38,20 +46,20 @@ const TableComponent = (props) => {
                       },
                     }} /></td>
                   <td className={`flex gap-3 mt-2`}>
-                    <img src={items?.nameImgsrc} alt={items?.nameImgalt} className={`rounded-md w-6 h-6`} />
-                    <p>{items?.name}</p>
+                    <img src={items?.preview_image ? items?.preview_image : nameImage} alt={items?.nameImgalt} className={`rounded-md w-6 h-6`} />
+                    <p>{items?.Name}</p>
                   </td>
                     <td className={``}>
-                      <img src={items?.owner} alt={items?.nameOwnerAlt} className={`rounded-full w-8 h-8`} />
+                      <img src={items?.Owner} alt={items?.nameOwnerAlt} className={`rounded-full w-8 h-8`} />
                   </td>
                     <td className={``}>
-                    {items?.label}
+                    Label 1
                   </td>
-                    <td className={``}>{items.type}</td>
-                    <td className={``}>{items.modified}</td>
+                    <td className={``}>{items.Type}</td>
+                    <td className={``}>{moment(items.ModifietAt).format('LL')}</td>
                     <td className={`flex text-left gap-2 mt-1`}>
-                      <img src={items.edit} alt={props.editAlt} className={`w-5 h-5 cursor-pointer`} />
-                      <DeleteModal overlayButton={<img src={items.delete} alt={props.deleteAlt} className={`w-5 h-5 cursor-pointer`} />} />
+                      <img src={editImage} alt={props.editAlt} className={`w-5 h-5 cursor-pointer`} />
+                      <DeleteModal overlayButton={<img src={deleteImage} alt={props.deleteAlt} className={`w-5 h-5 cursor-pointer`} />} />
                     </td>
                 </tr>})}
               </tbody>

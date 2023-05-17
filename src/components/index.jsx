@@ -77,8 +77,8 @@ const Dashboard = () => {
             </p>
             <img src={categoriesImg} alt={'categories'} width={15} height={15}/>
           </div>
-          <CheckboxLayout header={`Category 1`} CheckBoxData={checkBoxFirstData} />
-          <CheckboxLayout header={`Category 2`} CheckBoxData={checkBoxSecondData} />
+          <CheckboxLayout header={`Category 1`} CheckBoxData={checkBoxFirstData} index={0} />
+          <CheckboxLayout header={`Category 2`} CheckBoxData={checkBoxSecondData} index={1}/>
         </div>
         <div className={`w-4/5`}>
           <TableComponent header={`All items`} tableData={tableData} />
