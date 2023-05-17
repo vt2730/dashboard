@@ -1,7 +1,6 @@
-body {
-  margin: 0;
-}
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --upload-btn-cl: #814EE7;
   --main-bg: #DCE0E3;

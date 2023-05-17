@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 import { AllItems } from './hooks/AllItems';
 import { Category } from './hooks/Category';
-import Button from './common/ButtonFields/Button';
+import DashBoardIndex from './hooks/Dashboard';
 
 function App() {
   const {getAllItems} = AllItems();
@@ -14,10 +14,12 @@ function App() {
 
   useEffect(()=>{
     getAllCategory()
-  },[])
+  }, [])
+  
+
   return (
     <div className="App">
-      hello
+      <DashBoardIndex />
     </div>
   );
 }

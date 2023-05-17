@@ -9,12 +9,13 @@ import searchIcon from "../../assests/Search.svg";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
-    border: "1px solid #E5E7EB",
-    borderRadius: "5px",
+    border: "2px solid #E5E7EB",
+    borderRadius: "7px",
+    borderColor: "#A9B5DA" ,
 
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: 'white',
     "&:hover": {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: 'white',
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
@@ -44,7 +45,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         transition: theme.transitions.create("width"),
         width: "100%",
         [theme.breakpoints.up("md")]: {
-            width: "75ch",
+            width: "25ch",
         },
     },
 }));
