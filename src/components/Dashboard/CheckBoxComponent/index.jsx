@@ -13,15 +13,15 @@ const CheckboxLayout = (props) => {
 
   return (
     <div>
-      <div className={`flex flex-col gap-3`}>
-        <div className={`font-semibold text-[15px] pt-3 pl-3`}>
+      <div className={`flex flex-col gap-1`}>
+        <div className={`font-semibold text-[16px] text-[#172B4E] pt-3 pl-3`}>
           {props?.header}
         </div>
-        <div className={`flex flex-col gap-2`}>
+        <div className={`flex flex-col`}>
           {categoryArr && categoryArr.length > 0 && categoryArr[0]?.Labels?.map((item) => {
             return (
-              <p className={`text-[13px] flex justify-start items-center `}>
-                <Checkbox className={`checkboxCss`} sx={{
+              <p className={`text-[13px] flex justify-start items-center`}>
+                <Checkbox size="small" className={`checkboxCss`} sx={{
                   '&.Mui-checked': {
                     color: "#673ab7",
                   },

@@ -18,10 +18,9 @@ const Headerlayout = (props) => {
                         type="submit"
                         variant="contained"
                         handleClick={props.handleClick}
-                        buttonextracls={`!bg-[#814EE7] w-28 !capitalize !rounded-sm `}
-                    img={props.img}
-                    // width={props.imgWidth }
-                    // height={props.imgHeight}
+                        buttonextracls={`!bg-[#814EE7] w-28 !capitalize !rounded-md `}
+                        extraTextCls={`!font-bold`}
+                        img={props.img}
                     />
                 )
                     :

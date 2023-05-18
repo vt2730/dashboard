@@ -17,8 +17,6 @@ const DashBoardIndex = () => {
                   isbutton={true}
                   buttonname={`Upload`}
                   img={add}
-                //   imgHeight={35}
-                //   imgWidth={``}
               />}
           />
     </div>

@@ -72,7 +72,7 @@ const Dashboard = () => {
       <div className={`flex `} >
         <div className={`flex flex-col w-1/5`}>
           <div className={`flex gap-5 h-10 items-center`}>
-            <p className='font-semibold text-[15px] pt-1 pl-3'>
+            <p className='font-semibold text-[18px] text-[#172B4E] pt-1 pl-3'>
               CATEGORIES
             </p>
             <img src={categoriesImg} alt={'categories'} width={15} height={15}/>

@@ -14,52 +14,52 @@ const TableComponent = (props) => {
 
   return (
     <div>
-      <div className={`w-full bg-[#FFFFFF] rounded-lg px-5 pb-10 ${styles.table_shadow} `}>
+      <div className={`w-full bg-[#FFFFFF] rounded-lg px-5 pb-10 shadow-md`}>
         <div className={`h-20 flex pl-5 justify-start items-center text-2xl `}>
           {props.header}
         </div>
         <div>
           <table className={`table table-auto w-full `}>
-            <thead className={`border-b`} >
+            <thead className={`border-b-2`} >
 
-              <tr>
-                <th className={`text-left`}>
-                  <Checkbox sx={{
+              <tr className={`flex items-center`}>
+                <th className={`text-left w-[10%]`}>
+                  <Checkbox size="small" sx={{
                   '&.Mui-checked': {
                     color: "#673ab7",
                   },
                 }} /></th>
-                <th className={`text-left`}>NAME</th>
-                <th className={`text-left`}>OWNER</th>
-                <th className={`text-left`}>LABELS</th>
-                <th className={`text-left`}>TYPE</th>
-                <th className={`text-left`}>MODIFIED</th>
-                <th className={`text-left`}>ACTION</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[45%]`}>NAME</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[20%]`}>OWNER</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[20%]`}>LABELS</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[20%]`}>TYPE</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[20%]`}>MODIFIED</th>
+                <th className={`text-left text-sm text-[#4E535A] font-bold w-[20%]`}>ACTION</th>
               </tr>
             </thead>
               <tbody>
                 {tableiItems && tableiItems?.length > 0 &&
                  tableiItems?.map((items) => {
-                   return <tr className={`border-b`}>
-                    <td className={``} >
-                      <Checkbox sx={{
+                   return <tr className={`border-b py-4`}>
+                    <td className={`flex items-center pt-2 w-[10%]`} >
+                      <Checkbox size="small" sx={{
                       '&.Mui-checked': {
                         color: "#673ab7",
                       },
                     }} /></td>
-                  <td className={`flex gap-3 mt-2`}>
-                    <img src={items?.preview_image ? items?.preview_image : nameImage} alt={items?.nameImgalt} className={`rounded-md w-6 h-6`} />
+                  <td className={`flex items-center gap-3 mt-2 w-[48%] text-[#172B4E] font-semibold`}>
+                    <img src={items?.file ? items?.file : nameImage} alt={items?.nameImgalt} className={`rounded-md w-12 h-12`} />
                     <p>{items?.Name}</p>
                   </td>
-                    <td className={``}>
+                    <td className={`flex items-center w-[20%]`}>
                       <img src={items?.Owner} alt={items?.nameOwnerAlt} className={`rounded-full w-8 h-8`} />
                   </td>
-                    <td className={``}>
+                    <td className={`flex items-center w-[20%] text-[#979797]`}>
                     Label 1
                   </td>
-                    <td className={``}>{items.Type}</td>
-                    <td className={``}>{moment(items.ModifietAt).format('LL')}</td>
-                    <td className={`flex text-left gap-2 mt-1`}>
+                    <td className={`flex items-center w-[20%] text-[#979797]`}>{items.Type}</td>
+                    <td className={`flex items-center w-[20%] text-[#979797]`}>{moment(items.ModifietAt).format('LL')}</td>
+                    <td className={`flex items-center  text-left gap-4 mt-1 w-[20%]`}>
                       <img src={editImage} alt={props.editAlt} className={`w-5 h-5 cursor-pointer`} />
                       <DeleteModal overlayButton={<img src={deleteImage} alt={props.deleteAlt} className={`w-5 h-5 cursor-pointer`} />} />
                     </td>
