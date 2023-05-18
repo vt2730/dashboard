@@ -15,7 +15,7 @@ const TableComponent = (props) => {
   return (
     <div>
       <div className={`w-full bg-[#FFFFFF] rounded-lg px-5 pb-10 shadow-md`}>
-        <div className={`h-20 flex pl-5 justify-start items-center text-2xl `}>
+        <div className={`h-20 flex pl-5 justify-start items-center text-2xl text-[#172B4E] font-bold `}>
           {props.header}
         </div>
         <div>
