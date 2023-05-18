@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Checkbox} from '@mui/material'
 import DeleteModal from '../../../common/DeleteModal'
 import { useSelector } from 'react-redux'
@@ -6,18 +6,20 @@ import moment from 'moment'
 import editImage from '../../../assests/editImage.png'
 import deleteImage from '../../../assests/deleteImage.png'
 import nameImage from '../../../assests/nameImg.png'
+import styles from './Index.module.css'
+
 
 const TableComponent = (props) => {
   const tableiItems = useSelector((state) => state.dashboard.items)
 
   return (
     <div>
-      <div className={`w-full bg-[#FFFFFF]`}>
+      <div className={`w-full bg-[#FFFFFF] rounded-lg px-5 pb-10 ${styles.table_shadow} `}>
         <div className={`h-20 flex pl-5 justify-start items-center text-2xl `}>
           {props.header}
         </div>
         <div>
-          <table className={`table table-auto w-full`}>
+          <table className={`table table-auto w-full `}>
             <thead className={`border-b`} >
 
               <tr>
@@ -38,7 +40,7 @@ const TableComponent = (props) => {
               <tbody>
                 {tableiItems && tableiItems?.length > 0 &&
                  tableiItems?.map((items) => {
-                  return <tr>
+                   return <tr className={`border-b`}>
                     <td className={``} >
                       <Checkbox sx={{
                       '&.Mui-checked': {

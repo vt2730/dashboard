@@ -7,3 +7,7 @@
   --active: #E4E4ED;
   --secGray: #C3C9CD;
 }
+
+.search_css .MuiToolbar-root{
+  padding-right: 0;
+}

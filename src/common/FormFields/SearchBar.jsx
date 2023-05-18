@@ -63,7 +63,7 @@ export default function SearchBar(props) {
     };
 
     return (
-        <div className="search-container">
+        <div className={`search_css`}>
             <Toolbar className="search-main">
                 <Search className={`${props.searchCls}`}>
                     <SearchIconWrapper>

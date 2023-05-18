@@ -7,7 +7,7 @@ import add from '../../assests/add.svg'
 
 const DashBoardIndex = () => {
   return (
-    <div className={`bg-[#EEF3FA] h-screen`}>
+    <div className={`bg-[#EEF3FA] bg-cover h-screen`}>
           <TwohalfLayout
               sidebarsection={<SideBar LogoText='Stealth' />}
               rendercomponent={<Dashboard /> }
