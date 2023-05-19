@@ -4,6 +4,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import removeImage from '../../assests/remove.svg'
 import crossImage from '../../assests/cross.svg'
 import tickImage from '../../assests/tick.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const popover = (
